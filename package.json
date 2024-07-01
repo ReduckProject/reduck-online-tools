@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "pm2 start index.js --name \"reduck-tools-online\"",
+    "stop": "pm2 stop \"reduck-tools-online\"",
+    "restart": "pm2 restart \"reduck-tools-online\"",
+    "status" : "pm2 status",
+    "logs" : "pm2 logs \"reduck-tools-online\"",
     "test": "node index.js"
   },
   "keywords": [],
@@ -12,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "pm2": "^5.4.1"
   }
 }
